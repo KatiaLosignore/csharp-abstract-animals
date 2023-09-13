@@ -14,7 +14,7 @@ namespace csharp_abstract_animals.@abstract
         {
         }
 
-        // METODI
+        // METODI DELLA CLASSE ASTRATTA
         public override void CosaMangi()
         {
             Console.WriteLine("Semi e frutta");
@@ -25,6 +25,7 @@ namespace csharp_abstract_animals.@abstract
             Console.WriteLine("CipCip");
         }
 
+        // METODO DELL' INTERFACCIA
         public void Vola()
         {
             Console.WriteLine($"{nomeAnimale}: 'Sto volando!!!'");

@@ -8,6 +8,7 @@ namespace csharp_abstract_animals.@interface
 {
     public interface INuotante
     {
+        // METODO
         public void Nuota();
     }
 }

@@ -11,15 +11,20 @@ namespace csharp_abstract_animals.@abstract
         // ATTRIBUTI
         public string nomeAnimale;
 
+
         // COSTRUTTORE
         public Animale(string nomeAnimale)
         {
             this.nomeAnimale = nomeAnimale;
         }
+
+        // METODO
         public void Dormi()
         {
             Console.WriteLine("Zzz");
         }
+
+        // METODI ASTRATTI
         public abstract void Verso();
 
         public abstract void CosaMangi();
