@@ -47,14 +47,14 @@ Console.WriteLine("-------------------------------------------------");
 
 
 // Richiamo i metodi creati e li applico nelle classi corrispondenti
-
+/*
 caneOne.Nuota();
 passerottoOne.Vola();
 aquilaOne.Vola();
 delfinoOne.Nuota();
+*/
 
-
-// Richiamo i metodi FaiVolare / FaiNuotare passandogli come parametro l'animale corretto.
+// Creo i metodi FaiVolare / FaiNuotare passandogli come parametro l'animale corretto.
 static void FaiNuotare(INuotante animale)
 {
     animale.Nuota();
@@ -63,4 +63,16 @@ static void FaiNuotare(INuotante animale)
 static void FaiVolare(IVolante animale)
 {
     animale.Vola();
+}
+
+// Ciclo e richiamo i metodi FaiVolare / FaiNuotare creati 
+
+foreach (Animale animale in animali)
+{
+    if (animale is IVolante)
+        FaiVolare((IVolante)animale);
+    else if (animale is INuotante)
+        FaiNuotare((INuotante)animale);
+
+    Console.WriteLine();
 }
