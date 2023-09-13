@@ -1,13 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using csharp_abstract_animals;
+using csharp_abstract_animals.@abstract;
+using csharp_abstract_animals.@interface;
+
 
 // Istanzio le classi create
 
-Cane caneOne = new Cane();
-Passerotto passerottoOne = new Passerotto();
-Aquila aquilaOne = new Aquila();
-Delfino delfinoOne = new Delfino();
+Cane caneOne = new Cane("Cane");
+Passerotto passerottoOne = new Passerotto("Passerotto");
+Aquila aquilaOne = new Aquila("Aquila");
+Delfino delfinoOne = new Delfino("Delfino");
 
 // Creo una lista della classe astratta Animale
 
@@ -26,12 +28,12 @@ int numero = 1;
 
 foreach (Animale animale in animali)
 {
-    Console.WriteLine($"Animale {numero}:");
-    Console.WriteLine($"Verso: ");
+    Console.WriteLine($"Animale {numero} - {animale.nomeAnimale}:");
+    Console.Write($"Verso: ");
     animale.Verso();
-    Console.WriteLine($"Cosa Mangia: ");
+    Console.Write($"Cosa Mangia: ");
     animale.CosaMangi();
-    Console.WriteLine($"Come dorme: ");
+    Console.Write($"Come dorme: ");
     animale.Dormi();
 
     Console.WriteLine();

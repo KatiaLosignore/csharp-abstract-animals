@@ -4,10 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace csharp_abstract_animals
+namespace csharp_abstract_animals.@abstract
 {
+
     public class Delfino : Animale
     {
+        // COSTRUTTORE
+        public Delfino(string nomeAnimale) : base(nomeAnimale)
+        {
+        }
         public override void CosaMangi()
         {
             Console.WriteLine("Pesce, crostacei e calamari");
@@ -15,7 +20,7 @@ namespace csharp_abstract_animals
 
         public override void Verso()
         {
-           Console.WriteLine("Buzzes");
+            Console.WriteLine("Buzzes");
         }
     }
 }
