@@ -39,3 +39,28 @@ foreach (Animale animale in animali)
     Console.WriteLine();
     numero++;
 }
+
+Console.WriteLine("-------------------------------------------------");
+
+
+// INTERFACCE
+
+
+// Richiamo i metodi creati e li applico nelle classi corrispondenti
+
+caneOne.Nuota();
+passerottoOne.Vola();
+aquilaOne.Vola();
+delfinoOne.Nuota();
+
+
+// Richiamo i metodi FaiVolare / FaiNuotare passandogli come parametro l'animale corretto.
+static void FaiNuotare(INuotante animale)
+{
+    animale.Nuota();
+}
+
+static void FaiVolare(IVolante animale)
+{
+    animale.Vola();
+}
